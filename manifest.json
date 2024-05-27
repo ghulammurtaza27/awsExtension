@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "AWS S3 Setup Helper",
+  "version": "1.1",
+  "description": "Interactive guidance for AWS S3 setup.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.aws.amazon.com/*", "https://*.gemini.com/*"], 
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["libs/crypto-js.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

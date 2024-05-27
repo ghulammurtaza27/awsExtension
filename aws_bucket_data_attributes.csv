@@ -1,0 +1,13 @@
+Field Name,Class,Data Test ID,Data Analytics,Data Analytics Type,Data Analytics Funnel Key,Data Analytics Field Label
+Create bucket,awsui_heading-text_2qdw9_gej2d_327,,,,,
+General configuration,awsui_heading-text_2qdw9_gej2d_327,,,,substep-name,
+AWS Region,awsui_control_14mhv_18c4u_246,,AWSregion,eventContext,,create-bucket-general-config__bucket-region
+Bucket name,awsui_input_2rhyz_qevde_103,,bucketName,eventContext,,create-bucket-general-config__bucket-name
+Copy settings from existing bucket,awsui_control_14mhv_18c4u_246,ResourceSelectorFormField__form-field,copySettings,eventContext,,create-bucket-general-config__bucket-name
+Object Ownership,awsui_heading-text_2qdw9_gej2d_327,,objectOwnership,eventContext,,
+Block Public Access settings,awsui_heading-text_2qdw9_gej2d_327,,BPA,eventContext,,
+Bucket Versioning,awsui_heading-text_2qdw9_gej2d_327,,bucketVersioning,eventContext,,
+Tags,awsui_heading-text_2qdw9_gej2d_327,,bucketTags,eventContext,,
+Default encryption,awsui_heading-text_2qdw9_gej2d_327,,,,,
+Advanced settings,awsui_expand-button_gwq0h_cqtym_195,create-bucket-object-lock__expandable_section,,,substep94,create-bucket-object-lock__box
+Object Lock,awsui_radio-control_1mabk_3450l_147,,objectLock,eventContext,,create-bucket-object-lock__switch
