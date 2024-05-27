@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     (async () => {
       try {
         // Ensure you have the API key
-        const apiKey = "AIzaSyD2Ehafau-Lb4nyi7RrLhx9AQrGPt6SM2o"; // Replace with your actual API key
+        const apiKey = process.env.API_KEY; // Replace with your actual API key
 
         // Create the payload
         const payload = {
