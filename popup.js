@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load stored results on popup open
   const storedResults = localStorage.getItem('guidanceData');
   if (storedResults) {
-    responseElement.textContent = storedResults;
+    responseElement.innerHTML = storedResults;
   }
 
   sendRequestButton.addEventListener('click', () => {
     const prompt = promptInput.value;
-
 
     if (!prompt) {
       alert('Please enter a prompt.');
@@ -36,9 +35,9 @@ const guidanceData = [
         if (response.error) {
           responseElement.textContent = 'Error: ' + response.error;
         } else if (response.guidanceData && response.guidanceData.length > 0) {
-          const guidanceContent = response.guidanceData.map(item => `${item.guidance}`).join('\n\n');
+          const guidanceContent = response.guidanceData.map(item => `<div class="step">${item.guidance}</div>`).join('\n');
          
-          responseElement.textContent = guidanceContent;
+          responseElement.innerHTML = guidanceContent;
           // Store results in local storage
           localStorage.setItem('guidanceData', guidanceContent);
         } else {
